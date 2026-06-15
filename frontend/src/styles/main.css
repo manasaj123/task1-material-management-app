@@ -13,7 +13,7 @@ body {
 /* Sidebar */
 .sidebar {
   width: 200px;
-  background: #2e7d32;
+  background: #313951;
   padding: 20px;
   box-sizing: border-box;
 }
@@ -56,7 +56,7 @@ input, select {
 
 button {
   padding: 8px 12px;
-  background: #2e7d32;
+  background: #0517e3;
   color: white;
   border: none;
   cursor: pointer;

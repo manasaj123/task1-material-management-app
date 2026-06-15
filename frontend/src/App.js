@@ -29,8 +29,9 @@ export default function App() {
          
           <Link to="/materials">Material Master</Link><br />
           <Link to="/collection">Collection App</Link><br />
-          <Link to="/stock">Stock FIFO / LIFO</Link><br />
           <Link to="/calling">Calling App</Link> <br />
+          <Link to="/stock">Stock FIFO / LIFO</Link><br />
+          
           <Link to="/weekly">Weekly Market</Link>
         </div>
 

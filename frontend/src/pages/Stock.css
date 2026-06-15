@@ -117,3 +117,260 @@
   transform: translateY(-2px);
   transition: all 0.2s ease;
 }
+
+
+
+
+
+
+
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.page-title {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.loading, .no-data {
+  text-align: center;
+  color: #7f8c8d;
+  font-size: 1.2rem;
+  padding: 40px;
+}
+
+.materials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.material-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.material-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.material-header {
+  background: linear-gradient(135deg, #bfc3d3 0%, #e0c8f8 100%);
+  color: white;
+  padding: 20px;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.issue-type {
+  font-size: 0.8rem;
+  padding: 5px 15px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  font-weight: 600;
+}
+
+/* Stock Summary */
+.stock-summary {
+  display: flex;
+  gap: 15px;
+  padding: 15px 20px;
+  background: #f8f9fa;
+  border-bottom: 2px solid #e9ecef;
+}
+
+.summary-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.summary-label {
+  font-weight: 600;
+  color: #495057;
+  font-size: 0.85rem;
+  margin-bottom: 5px;
+}
+
+.summary-value {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.summary-value.available {
+  color: #28a745;
+}
+
+.summary-value.reserved {
+  color: #ffc107;
+}
+
+.summary-value.expired {
+  color: #dc3545;
+}
+
+/* Stock Table */
+.stock-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.stock-table th {
+  background: #f8f9fa;
+  color: #495057;
+  font-weight: 600;
+  padding: 12px;
+  text-align: left;
+  border-bottom: 2px solid #dee2e6;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stock-table td {
+  padding: 12px;
+  border-bottom: 1px solid #e9ecef;
+  font-size: 0.9rem;
+}
+
+.stock-table tbody tr:hover {
+  background: #f8f9fa;
+}
+
+.table-corner-left {
+  border-radius: 0;
+}
+
+.table-corner-right {
+  border-radius: 0;
+}
+
+.highlight-row {
+  background: #e7f3ff;
+}
+
+.highlight-row:hover {
+  background: #d0e7ff !important;
+}
+
+.expired-row {
+  background: #fff5f5;
+}
+
+.near-expiry-row {
+  background: #fff9e6;
+}
+
+.qty-cell {
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+/* Status Badges */
+.status-badge {
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.status-badge.completed {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status-badge.pending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+/* Condition Badges */
+.condition-badge {
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.condition-badge.fresh {
+  background: #d4edda;
+  color: #155724;
+}
+
+.condition-badge.near-expiry {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.condition-badge.expired {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+/* Refresh Button */
+.refresh-btn {
+  display: block;
+  margin: 30px auto;
+  padding: 12px 30px;
+  background: linear-gradient(135deg, #ced2e6 0%, #d9c5ec 100%);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+.refresh-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
+.refresh-btn:active {
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .materials-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .stock-summary {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .stock-table {
+    font-size: 0.8rem;
+  }
+  
+  .stock-table th,
+  .stock-table td {
+    padding: 8px;
+  }
+}
